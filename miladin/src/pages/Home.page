@@ -1,9 +1,5 @@
 <apex:page showHeader="false" title="{!'Home'}" cache="false">
-  <apex:composition template="{!$Site.Template}">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"></meta>
-    <apex:define name="body">
-      <center>
-        
+
         
         
 <!--
@@ -271,42 +267,12 @@ liveagent.init('https://d.la1-c2-iad.salesforceliveagent.com/chat', '5725A000000
 	
 	
 </script>
-<script>
-			
-			function openForm3() {
-			    document.getElementById("myForm3").style.display = "block";
-			
-			    // Adds an element to the document
-			    var p = document.getElementById("object-parent3");
-			    var newElement = document.createElement("object");
-			    newElement.setAttribute('id', "chat3");
-			    newElement.setAttribute('width', "280");
-			    newElement.setAttribute('height', "400");
-			    newElement.setAttribute('data', "https://miladin-developer-edition.na49.force.com/chat/apex/CustomChatPage?language=en_US&org_id=00D5A0000016ziV&deployment_id=5725A000000gVNz&sid=cb75657e-a984-4240-bbfd-b0f81701caa2#deployment_id=5725A000000gVNz&org_id=00D5A0000016ziV&button_id=5735A000000khl3&session_id=cb75657e-a984-4240-bbfd-b0f81701caa2");
-			    newElement.innerHTML = "html";
-			    p.appendChild(newElement);
-			}
-			
-			function closeForm3() {
-			    document.getElementById("myForm3").style.display = "none";
-			
-			    // Removes an element from the document
-			    var element = document.getElementById("chat3");
-			    element.parentNode.removeChild(element);
-			
-			}
-			</script>
-			
-			
-<script>
-
-
-
-
-</script>
 
 
 <style>
+html{
+background: #a8adc3;
+}
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
@@ -327,19 +293,21 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* The popup chat - hidden by default */
 .chat-popup3 {
-  display: none;
   position: fixed;
-  bottom: 0;
-  left: 225px;
-  border: 3px solid #f1f1f1;
+  bottom: 20px;
+  right: 20px;
   z-index: 9;
+  background: #181f29;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0px 0px 9px #243a5161;
+  border: none;
 }
 
 /* Add styles to the form container */
 .form-container3 {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
+  padding: 0px;
+  background-color: #181f29;
+  border-radius: 10px;
 }
 
 /* Full-width textarea */
@@ -361,52 +329,129 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Set a style for the submit/send button */
 .form-container3 .btn3 {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+    color: #ffffff00;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    padding: 21px;
+    margin: 0;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0px 9px 0px 0px;
 }
 
 /* Add a red background color to the cancel button */
 .form-container3 .cancel3 {
-  background-color: red;
-  background: red;
+  background: #0e0e0e;
+  background-color: #0e0e0e;
+  background-image: url('https://img.icons8.com/small/50/FFFFFF/close-window.png');
+  background-size: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.form-container3 .cancel3:hover{
+	background-color: #f05353;
 }
 
 /* Add some hover effects to buttons */
 .form-container3 .btn3:hover3, .open-button3:hover {
   opacity: 1;
 }
+object#chat3 {
+    border-radius: 9px 10px 0px 0px;
+}
+
+#liveagent_invite_button_5735A000000khl3{
+position: fixed; 
+z-index: 10000; 
+border-radius: 5px; 
+background-color: rgb(0, 153, 230); 
+height: 0px; 
+width: 0px; 
+left: -1000px; 
+top: -1000px;
+}
 </style>
 
+
 <!-- For this usage, the "Animation" type of this invitation should be set to "Custom", otherwise two invitations will appear (the Salesforce-provided one and this custom one). -->
-<div id="liveagent_invite_button_5735A000000khl3" style="display: none; position: fixed; z-index: 1000; border-radius: 5px; background-color: #0099e6; height: 100px; width: 200px;">
+<div id="liveagent_invite_button_5735A000000khl3" style="position: fixed; left: -1000px; top: -1000px; z-index: 10000;">
 	
 <!-- Creates an "X" option to reject or close the invitation if it's offered  -->
-<div style="cursor: pointer; padding: 5px; right: 5px; position: absolute; color: white; font-size: 1.8em; font-weight: bold;" onclick="liveagent.rejectChat('5735A000000khl3')">x</div>
+<div style="cursor: pointer; padding: 5px; right: 5px; position: absolute; color: white; font-size: 1.8em; font-weight: bold;" onclick="liveagent.rejectChat('5735A000000khl3')"></div>
 
 <!-- Provides the Start Chat option for the customer to accept or start the chat for the invitation  -->
-<div style="cursor: pointer; top: 42px; left: 65px; position: absolute;font-weight: bold; color:white; font-size: 16px;" onclick="liveagent.startChat('5735A000000khl3')">Start Chat</div>
-		
+<div style="cursor: pointer; top: 42px; left: 65px; position: absolute;font-weight: bold; color:white; font-size: 16px;" onclick="liveagent.startChat('5735A000000khl3')"></div>
+
 </div>
+	
 <div class="chat-popup3" id="myForm3">
 
 <form action="" class="form-container3">
 
 <!-- <textarea placeholder="Type message.." name="msg" required></textarea> -->
 
+<button type="button" class="btn3 cancel3" onclick="closeForm3();liveagent.rejectChat('5735A000000khl3')">x</button>
+
 <div id="object-parent3">
 <!--Here goes dynamicaly created object-->
 </div>       
 
-<button type="button" class="btn3 cancel3" onclick="closeForm3();liveagent.rejectChat('5735A000000khl3')">Close</button>
+
 </form>
 
 </div>	
+
+<script>
+			
+			function openForm3() {
+			    document.getElementById("myForm3").style.display = "block";
+			
+			    // Adds an element to the document
+			    var p = document.getElementById("object-parent3");
+			    var newElement = document.createElement("object");
+			    newElement.setAttribute('id', "chat3");
+			    newElement.setAttribute('width', "380");
+			    newElement.setAttribute('height', "600");
+			    newElement.setAttribute('data', "https://miladin-developer-edition.na49.force.com/chat/apex/CustomChatPage?language=en_US&org_id=00D5A0000016ziV&deployment_id=5725A000000gVNz&sid=cb75657e-a984-4240-bbfd-b0f81701caa2#deployment_id=5725A000000gVNz&org_id=00D5A0000016ziV&button_id=5735A000000khl3&session_id=cb75657e-a984-4240-bbfd-b0f81701caa2");
+			    newElement.innerHTML = "html";
+			    p.appendChild(newElement);
+			}
+			
+			function closeForm3() {
+			    document.getElementById("myForm3").style.display = "none";
+			
+			    // Removes an element from the document
+			    var element = document.getElementById("chat3");
+			    element.parentNode.removeChild(element);
+			
+			}
+</script>
+
+<script></script>	
+
+<script>
+
+var observer = new MutationObserver(styleChangedCallback);
+observer.observe(document.getElementById('liveagent_invite_button_5735A000000khl3'), {
+    attributes: true,
+    attributeFilter: ['style'],
+});
+
+var oldTop = document.getElementById('liveagent_invite_button_5735A000000khl3').style.top;
+
+function styleChangedCallback(mutations, observer) {
+    var newTop = mutations[1].target.style.top;
+    if (newTop !== oldTop) {
+        console.log('new:', newTop, 'old:', oldTop);
+        openForm3();
+        observer.disconnect();
+    }
+}
+</script>
+
 
 <!-- <script>
 
@@ -900,9 +945,5 @@ function closeForm2() {
 <!-- <div id="liveagent_invite_button_5735A000000khl3" style="display:none;"><span style="cursor: pointer; width: 100px; height: 20px; padding: 5px;" onclick="liveagent.startChat('5735A000000khl3')">Start Chat</span>
 <span style="cursor: pointer; width: 100px; height: 20px; padding: 5px;" onclick="liveagent.rejectChat('5735A000000khl3')">Reject Chat</span>
 </div> -->
-        
-      </center>
-    </apex:define>
-  </apex:composition>
-  <site:previewAsAdmin />
+
 </apex:page>
