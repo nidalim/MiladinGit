@@ -1,0 +1,52 @@
+<apex:page controller="trailheadapp.TrailheadTestController">
+    <apex:sectionHeader title="Trail Tracker" subtitle="Dedupe Badges & Trails" description="You can also use this page to kick off the Trailhead sync job immediately."/>
+    <apex:pageMessages /><br/> 
+    
+    <apex:form >
+        <apex:pageBlock >
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!dedupe}" value="Run Dedupe Data"/>
+                <apex:commandButton action="{!queueJob}" value="Start Sync Job"/>
+            </apex:pageBlockButtons>
+
+            <p>We have found the following User Badges with an <b>assigned</b> status in your org for duplicate badge records. You may want to move or create these assigned User Badges on the
+            correct badge before deleting the duplicates.</p><br/>
+
+            <apex:pageBlockSection title="Assigned Users" columns="1">
+                <apex:pageBlockTable value="{!assignedBadges}" var="b">
+                    <apex:column headerValue="User Badge">
+                        <apex:outputLink value="/{!b.Id}" target="_blank">{!b.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!b.User__r.Name}" headerValue="User"/>
+                    <apex:column value="{!b.Badge__r.Name}" headerValue="Badge"/>
+                    <apex:column value="{!b.trailheadapp__Status__c}" headerValue="Status"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+
+            <p>We have found the following <b>duplicate</b> Badges and Trails records in your org. Clicking the Dedupe Data button above will delete these records.</p>
+
+            <apex:pageBlockSection title="Duplicate Badges & Trails" columns="2">
+
+                <apex:pageBlockSectionItem >
+                    <apex:pageBlockTable value="{!dupeBadges}" var="b">
+                        <apex:column headerValue="Badge Name">
+                            <apex:outputLink value="/{!b.Id}" target="_blank">{!b.Name}</apex:outputLink>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:pageBlockTable value="{!dupeTrails}" var="t">
+                        <apex:column headerValue="Trail Name">
+                            <apex:outputLink value="/{!t.Id}" target="_blank">{!t.Name}</apex:outputLink>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSectionItem>
+
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>
