@@ -350,6 +350,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-size: 26px;
   background-repeat: no-repeat;
   background-position: center;
+  display:none;
 }
 .form-container3 .cancel3:hover{
 	background-color: #f05353;
@@ -408,6 +409,7 @@ top: -1000px;
 			
 			function openForm3() {
 			    document.getElementById("myForm3").style.display = "block";
+			    document.getElementsByClassName("cancel3").style.display = "block";
 			
 			    // Adds an element to the document
 			    var p = document.getElementById("object-parent3");
@@ -422,6 +424,7 @@ top: -1000px;
 			
 			function closeForm3() {
 			    document.getElementById("myForm3").style.display = "none";
+			    document.getElementsByClassName("cancel3").style.display = "none";
 			
 			    // Removes an element from the document
 			    var element = document.getElementById("chat3");
