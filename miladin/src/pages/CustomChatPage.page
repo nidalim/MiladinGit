@@ -1,5 +1,13 @@
 <apex:page showHeader="false">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $(".liveAgentChatInput").attr("placeholder", "Enter your question here");  
+});
+</script>
 <style>
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
 #liveAgentClientChat.liveAgentStateWaiting {
 // The CSS class that is applied when the chat request is waiting to be accepted
 // See "Waiting State" screenshot below
@@ -12,47 +20,188 @@
 // The CSS class that is applied when the chat has ended
 // See "Ended State" screenshot below
 }
-body { overflow: hidden; width: 100%; height: 100%; padding: 0; margin: 0 }
+body { font-size:15px; overflow: hidden; width: 100%; height: 100%; padding: 0; margin: 0 }
 #waitingMessage { height: 100%; width: 100%; vertical-align: middle; text-align: center;
 display: none; }
 #liveAgentClientChat.liveAgentStateWaiting #waitingMessage { display: table; }
 #liveAgentSaveButton, #liveAgentEndButton { z-index: 2; }
 .liveAgentChatInput {
-height: 25px;
-border-width: 1px;
-border-style: solid;
-border-color: #000;
-padding: 2px 0 2px 4px;
-background: #fff;
+background: #ffffff;
 display: block;
-width: 99%;
+width: 97%;
+border: none;
+margin: 0;
+padding: 20px;
+border-radius:0px;
+font-size:15px;
 }
 .liveAgentSendButton {
 display: block;
-width: 60px;
-height: 31px;
-padding: 0 0 3px;
 position: absolute;
 top: 0;
 right: -67px;
+color: #16212c00;
+border: none;
+cursor: pointer;
+padding: 21px;
+margin: 0;
+background-color:white;
+background-image: url('https://img.icons8.com/windows/50/757575/paper-plane.png');
+background-size: 25px;
+background-repeat: no-repeat;
+background-position: center;
+border-radius: 0px;
+width: 50px;
+}
+.liveAgentSendButton:hover{
+	background-position: center;
 }
 #liveAgentChatLog {
 width: auto;
 height: auto;
-top: 0px;
+top: 29px;
 position: absolute;
 overflow-y: auto;
 left: 0;
 right: 0;
-bottom: 0;
+bottom: 33px;
+background: #f5f5f5;
+border:none;
+}
+div#liveAgentChatLogText {
+    padding: 0px;
+}
+button#liveAgentSaveButton {
+    color: #ffffff00;
+    background: #0e0e0e;
+    background-image: url(https://img.icons8.com/ios/50/FFFFFF/installing-updates-filled.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 54px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    padding: 21px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    border-radius: 0;
+    right: 97px;
+    z-index: 1;
+}
+button#liveAgentSaveButton:hover{
+	background-color: #53a7f0;
+}
+button.liveAgentChatElement.liveAgentEndButton:hover{
+	background-color: #53a7f0;
+}
+button.liveAgentChatElement.liveAgentEndButton {
+    color: #ffffff00;
+    background: #0e0e0e;
+    background-image: url(https://img.icons8.com/small/50/FFFFFF/exit.png);
+    background-size: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 54px;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    padding: 21px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    border-radius: 0;
+    float: right;
+    right: 48px;
+    z-index: 1;
+}
+span.operator {
+    text-align: left;
+    float: left;
+    clear: both;
+    margin: 10px;
+    padding: 20px;
+    background: #53a6ee;
+    color: white;
+    border-radius: 0px 10px 10px 10px;
+}
+span.client {
+    text-align: left;
+    float: right;
+    clear: both;
+    margin: 10px;
+    padding: 20px;
+    background: #0e0e0e;
+    color: white;
+    border-radius: 10px 0px 10px 10px;
+}
+#liveAgentChatLogText .name {
+    display: none;
+    white-space: normal;
+}
+#liveAgentChatLogText span {
+    display: table;
+    word-break: break-all;
+}
+#liveAgentChatLogText span a{
+	color:white;
+}
+#liveAgentChatLogText span a:hover{
+	color:#d3e9ff;
+}
+*:focus {
+    outline: none;
+}
+span#liveAgentChatLogTyping {
+    position: relative;
+    margin-top: 10px;
+    background: #e0e0e0;
+    color: #16212c;
+}
+/* width */
+::-webkit-scrollbar {
+    display:none;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+#intertrader-logo{
+	background:#0E0E0E;
+}
+
+#intertrader-logo img{
+	border: 0;
+    height: 22px;
+    padding: 16px;
+}
 </style>
-<div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;">
+<div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;background: #ffffff;">
 <liveAgent:clientChat >
+
+<div id="intertrader-logo">
+<apex:image id="intertrader-logo" value="https://www.intertrader.com/eu/wp-content/uploads/2017/11/intertrader-logo-white-optimize.png" alt="Intertrader"/>
+
+</div>
+
 <liveAgent:clientChatSaveButton />
 <liveAgent:clientChatEndButton />
-<div style="top: 25px; left: 5px; right: 5px; bottom: 5px; position: absolute; z-index:
+<div style="top: 25px; left: 0px; right: 0px; bottom: 5px; position: absolute; z-index:
 0;">
 <liveAgent:clientChatAlertMessage />
 <liveAgent:clientChatStatusMessage />
@@ -64,9 +213,10 @@ bottom: 0;
 <div style="top: 0; right: 0; bottom: 41px; left: 0; padding: 0; position: absolute;
 word-wrap: break-word; z-index: 0;">
 <liveAgent:clientChatLog />
+
 </div>
-<div style="position: absolute; height: auto; right: 0; bottom: 0; left: 0; margin-right:
-67px;">
+<div style="position: absolute; height: auto; right: 0; bottom: 5px; left: 10px; margin-right:
+77px;">
 <liveagent:clientChatInput /><liveAgent:clientChatSendButton />
 </div>
 
