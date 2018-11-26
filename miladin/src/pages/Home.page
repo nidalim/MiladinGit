@@ -394,7 +394,7 @@ top: -1000px;
 
 <!-- <textarea placeholder="Type message.." name="msg" required></textarea> -->
 
-<button type="button" class="btn3 cancel3" onclick="liveagent.rejectChat('5735A000000khl3')">x</button>
+<button type="button" class="btn3 cancel3" onclick="closeForm3();liveagent.rejectChat('5735A000000khl3')">x</button>
 
 <div id="object-parent3">
 <!--Here goes dynamicaly created object-->
