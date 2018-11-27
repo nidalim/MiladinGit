@@ -417,7 +417,7 @@ top: -1000px;
 			    newElement.setAttribute('id', "chat3");
 			    newElement.setAttribute('width', "380");
 			    newElement.setAttribute('height', "600");
-			    newElement.setAttribute('data', "https://miladin-developer-edition.na49.force.com/chat/apex/CustomChatPage?language=en_US&org_id=00D5A0000016ziV&deployment_id=5725A000000gVNz&button_id=5735A000000khl3");
+			    newElement.setAttribute('data', "https://miladin-developer-edition.na49.force.com/chat/apex/CustomChatPage?language=en_US&org_id=00D5A0000016ziV&deployment_id=5725A000000gVNz&#deployment_id=5725A000000gVNzorg_id=00D5A0000016ziV&&button_id=5735A000000khl3");
 			    newElement.innerHTML = "html";
 			    p.appendChild(newElement);
 			}
