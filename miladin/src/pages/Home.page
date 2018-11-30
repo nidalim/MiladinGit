@@ -455,6 +455,8 @@ function styleChangedCallback(mutations, observer) {
 }
 </script>
 
+List<Account> a = [SELECT Id from Account where liveActivated__c = true and hasDeposited__c = false];
+system.debug(a);
 
 <!-- <script>
 
