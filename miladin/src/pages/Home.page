@@ -441,7 +441,7 @@ $(".max_min_button").click(function () {
         $(this).html("-");
     }
     var thisParent = $(this).parent();
-    $(thisParent).next(".news_body").slideToggle();
+    $(thisParent).next("#liveagent_invite_button_5735A000000khl3").slideToggle();
 });
 </script>	
 
