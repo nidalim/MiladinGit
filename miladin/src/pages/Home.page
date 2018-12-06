@@ -393,7 +393,7 @@ top: -1000px;
 <form action="" class="form-container3">
 
 <!-- <textarea placeholder="Type message.." name="msg" required></textarea> -->
-
+<div class="max_min_button">-</div>
 <button type="button" class="btn3 cancel3" onclick="closeForm3();liveagent.rejectChat('5735A000000khl3')">x</button>
 
 <div id="object-parent3">
@@ -433,7 +433,17 @@ top: -1000px;
 			}
 </script>
 
-<script></script>	
+<script>
+$(".max_min_button").click(function () {
+    if ($(this).html() == "-") {
+        $(this).html("+");
+    } else {
+        $(this).html("-");
+    }
+    var thisParent = $(this).parent();
+    $(thisParent).next(".news_body").slideToggle();
+});
+</script>	
 
 <script>
 
