@@ -376,7 +376,7 @@ top: -1000px;
 }
 </style>
 
-<button class="btn-minimize"></button>
+
 <!-- For this usage, the "Animation" type of this invitation should be set to "Custom", otherwise two invitations will appear (the Salesforce-provided one and this custom one). -->
 <div id="liveagent_invite_button_5735A000000khl3" style="position: fixed; left: -1000px; top: -1000px; z-index: 10000;">
 	
@@ -394,6 +394,7 @@ top: -1000px;
 
 <!-- <textarea placeholder="Type message.." name="msg" required></textarea> -->
 
+<button class="btn-minimize"></button>
 <button type="button" class="btn3 cancel3" onclick="closeForm3();liveagent.rejectChat('5735A000000khl3')">x</button>
 
 <div id="object-parent3">
@@ -458,7 +459,7 @@ function styleChangedCallback(mutations, observer) {
 <script>
 $(".btn-minimize").click(function(){
     $(this).toggleClass('btn-plus');
-    $("#liveagent_invite_button_5735A000000khl3").slideToggle();
+    $(".chat-popup3").slideToggle();
   });
 </script>	
 <!-- <script>
