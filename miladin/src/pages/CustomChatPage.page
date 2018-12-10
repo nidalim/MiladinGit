@@ -8,7 +8,7 @@ $(document).ready(function() {
 </script>
 <script>
 $(document).ready(function() {
-$(function () {
+
    var timesSubmitted = 0;
    var maxSubmits = 5;
    var intervalMilliseconds = 10000; // for testing   
@@ -29,7 +29,7 @@ $(function () {
         }
         event.preventDefault();        
     });        
-});
+
 });
 </script>
 <style>
