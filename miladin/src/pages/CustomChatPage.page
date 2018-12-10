@@ -7,6 +7,7 @@ $(document).ready(function() {
 });
 </script>
 <script>
+$(document).ready(function() {
 $(function () {
    var timesSubmitted = 0;
    var maxSubmits = 5;
@@ -28,6 +29,7 @@ $(function () {
         }
         event.preventDefault();        
     });        
+});
 });
 </script>
 <style>
