@@ -4,12 +4,8 @@
 $(document).ready(function() {
   $(".liveAgentChatInput").attr("placeholder", "Enter your question here");  
   $(".liveAgentChatInput").attr("maxlength", "255"); 
-});
-</script>
-<script>
-$(document).ready(function() {
-
-   var timesSubmitted = 0;
+  
+     var timesSubmitted = 0;
    var maxSubmits = 5;
    var intervalMilliseconds = 10000; // for testing   
    var interval;   
@@ -28,10 +24,10 @@ $(document).ready(function() {
             $("#intertrader-logo").append('valid<br />')   
         }
         event.preventDefault();        
-    });        
-
+    }); 
 });
 </script>
+
 <style>
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; }
