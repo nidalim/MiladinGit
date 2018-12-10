@@ -6,6 +6,30 @@ $(document).ready(function() {
   $(".liveAgentChatInput").attr("maxlength", "255"); 
 });
 </script>
+<script>
+$(function () {
+   var timesSubmitted = 0;
+   var maxSubmits = 5;
+   var intervalMilliseconds = 10000; // for testing   
+   var interval;   
+    $(".liveAgentSendButton").click(function (event) {
+        if (!interval) {
+            interval = setTimeout(function () {
+                interval = undefined;
+                timesSubmitted = 0;
+                $("#myForm3").append('TIMER RESET. Submit again.<br />')
+            }, intervalMilliseconds);
+        }
+        timesSubmitted ++;
+        if (timesSubmitted > maxSubmits) {
+            $("#myForm3").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />')
+        } else {
+            $("#myForm3").append('valid<br />')   
+        }
+        event.preventDefault();        
+    });        
+});
+</script>
 <style>
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; }
