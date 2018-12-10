@@ -26,7 +26,13 @@ $(document).ready(function() {
 	} else {
 		$("#validation").append('valid<br />')   
 	}
-		event.preventDefault();	 		      
+		event.preventDefault();	
+		 	
+		function onclick(event){
+			//SfdcApp.LiveAgent.Chasitor.sendMessage();
+			return false;
+		}	
+		      
 	}); 
 });
 </script>
