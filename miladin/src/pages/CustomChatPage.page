@@ -10,7 +10,7 @@ $(document).ready(function() {
 	var intervalMilliseconds = 10000; // for testing   
 	var interval;   
 	
-	$("button.liveAgentSendButton").click(function(event){
+	$("button.liveAgentChatElement.liveAgentSendButton").click(function(event){
 	
   	if (!interval){
 		interval = setTimeout(function(){
@@ -21,12 +21,7 @@ $(document).ready(function() {
 	}
 	timesSubmitted ++;
 	
-	if (timesSubmitted > maxSubmits) {	
-	 
-	$('.liveAgentSendButton"]').on('click', function(e){
-    e.preventDefault();
-	});
-	
+	if (timesSubmitted > maxSubmits) {		
 		$("#validation").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />')
 	} else {
 		$("#validation").append('valid<br />')   
