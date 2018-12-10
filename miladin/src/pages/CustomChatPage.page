@@ -28,8 +28,7 @@ $(document).ready(function() {
 	}
 		event.preventDefault();	
 		 	
-		function onclick(event){
-			//SfdcApp.LiveAgent.Chasitor.sendMessage();
+		$(".liveAgentSendButton").click(function(event){
 			return false;
 		}	
 		      
