@@ -10,7 +10,7 @@ $(document).ready(function() {
 	var intervalMilliseconds = 10000; // for testing   
 	var interval;   
 	
-	$(".liveAgentSendButton").click(function(event){
+	$("button.liveAgentSendButton").click(function(event){
 	
   	if (!interval){
 		interval = setTimeout(function(){
