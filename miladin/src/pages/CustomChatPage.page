@@ -21,16 +21,17 @@ $(document).ready(function() {
 	}
 	timesSubmitted ++;
 	
-	if (timesSubmitted > maxSubmits) {	 
+	if (timesSubmitted > maxSubmits) {
+	$(".liveAgentSendButton").click(function(event){
+			return false;
+		});		 
 		$("#validation").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />')
 	} else {
 		$("#validation").append('valid<br />')   
 	}
 		event.preventDefault();	
 		 	
-		$(".liveAgentSendButton").click(function(event){
-			return false;
-		});	
+		
 		      
 	}); 
 });
