@@ -5,26 +5,26 @@ $(document).ready(function() {
   $(".liveAgentChatInput").attr("placeholder", "Enter your question here");  
   $(".liveAgentChatInput").attr("maxlength", "255"); 
   
-     var timesSubmitted = 0;
-   var maxSubmits = 5;
-   var intervalMilliseconds = 10000; // for testing   
-   var interval;   
-    $(".liveAgentSendButton").click(function (event) {
-        if (!interval) {
-            interval = setTimeout(function () {
-                interval = undefined;
-                timesSubmitted = 0;
-                $("#intertrader-logo").append('TIMER RESET. Submit again.<br />')
-            }, intervalMilliseconds);
-        }
-        timesSubmitted ++;
-        if (timesSubmitted > maxSubmits) {
-            $("#intertrader-logo").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />')
-        } else {
-            $("#intertrader-logo").append('valid<br />')   
-        }
-        event.preventDefault();        
-    }); 
+	var timesSubmitted = 0;
+	var maxSubmits = 5;
+	var intervalMilliseconds = 10000; // for testing   
+	var interval;   
+	$(".liveAgentSendButton").click(function (event) {
+  	if (!interval) {
+		interval = setTimeout(function () {
+			interval = undefined;
+			timesSubmitted = 0;
+			$("#validation").append('TIMER RESET. Submit again.<br />')
+		}, intervalMilliseconds);
+	}
+	timesSubmitted ++;
+	if (timesSubmitted > maxSubmits) {
+		$("#validation").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />')
+	} else {
+		$("#validation").append('valid<br />')   
+	}
+		event.preventDefault();        
+	}); 
 });
 </script>
 
@@ -216,7 +216,7 @@ span#liveAgentChatLogTyping {
 </style>
 <div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;background: #ffffff;">
 <liveAgent:clientChat >
-
+<div id="validation"></div>
 <div id="intertrader-logo">
 <apex:image id="intertrader-logo" value="https://www.intertrader.com/eu/wp-content/uploads/2017/11/intertrader-logo-white-optimize.png" alt="Intertrader"/>
 
