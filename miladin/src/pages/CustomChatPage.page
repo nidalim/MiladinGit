@@ -30,7 +30,7 @@ $(document).ready(function() {
 		 	
 		$(".liveAgentSendButton").click(function(event){
 			return false;
-		}	
+		});	
 		      
 	}); 
 });
