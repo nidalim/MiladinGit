@@ -3,6 +3,7 @@
 <script>
 $(document).ready(function() {
   $(".liveAgentChatInput").attr("placeholder", "Enter your question here");  
+  $(".liveAgentChatInput").attr("maxlength", "255"); 
 });
 </script>
 <style>
