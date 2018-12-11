@@ -231,7 +231,7 @@ div#validation {
     height: 70px;
     color: white;
     z-index: 10;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
     overflow: hidden;
 }
