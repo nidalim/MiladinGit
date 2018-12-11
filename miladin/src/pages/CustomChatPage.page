@@ -19,6 +19,11 @@ $(document).ready(function() {
 			$("#validation").empty();
 			$(".liveAgentSendButton").prop( "disabled", false );
 			$(".liveAgentChatInput").prop( "disabled", false );
+			$('input#liveAgentChatInput').keypress(function(event) {
+    		if (event.keyCode == 13) {
+       	 		return true;
+    		}
+		});
 			$("#validation").css("display", "none"); 	
 		}, intervalMilliseconds);
 	}
