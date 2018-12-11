@@ -17,6 +17,8 @@ $(document).ready(function() {
 			interval = undefined;
 			timesSubmitted = 0;
 			$("#validation").append('TIMER RESET. Submit again.<br />')
+			$( ".liveAgentSendButton" ).prop( "disabled", false );
+			$( ".liveAgentChatInput" ).prop( "disabled", false );
 		}, intervalMilliseconds);
 	}
 	timesSubmitted ++;
@@ -27,8 +29,7 @@ $(document).ready(function() {
 		$("#validation").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />')
 	} else {
 		$("#validation").append('valid<br />')
-		$( ".liveAgentSendButton" ).prop( "disabled", false );
-		$( ".liveAgentChatInput" ).prop( "disabled", false );    
+		    
 	}
 		event.preventDefault();	 
 		   
