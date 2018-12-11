@@ -19,6 +19,7 @@ $(document).ready(function() {
 			//$("#validation").append('TIMER RESET. Submit again.<br />')
 			$(".liveAgentSendButton").prop( "disabled", false );
 			$(".liveAgentChatInput").prop( "disabled", false );
+			$("#validation").attr("display", "none"); 	 	
 		}, intervalMilliseconds);
 	}
 	timesSubmitted ++;
@@ -227,8 +228,8 @@ div#validation {
     display: block;
     position: absolute;
     bottom: 79px;
-    background: #019ff0;
-    height: 50px;
+    background: #019ff0bd;
+    height: 70px;
     color: white;
     z-index: 10;
     padding: 20px;
