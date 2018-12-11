@@ -23,7 +23,7 @@ $(document).ready(function() {
     		if (event.keyCode == 13) {
        	 		return true;
     		}
-		});
+			});
 			$("#validation").css("display", "none"); 	
 		}, intervalMilliseconds);
 	}
@@ -42,6 +42,11 @@ $(document).ready(function() {
 		$("#validation").css("display", "block");
 	} else {
 		//$("#validation").append('valid<br />');
+		$('input#liveAgentChatInput').keypress(function(event) {
+    		if (event.keyCode == 13) {
+       	 		return true;
+    		}
+			});
 		    
 	}
 		 
