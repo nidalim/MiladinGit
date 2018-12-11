@@ -225,7 +225,7 @@ span#liveAgentChatLogTyping {
     padding: 16px;
 }
 div#validation {
-    display: block;
+    display: none;
     position: absolute;
     right: 0px;
     bottom: 0px;
