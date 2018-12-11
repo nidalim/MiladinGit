@@ -27,7 +27,7 @@ $(document).ready(function() {
 		$(".liveAgentSendButton").prop( "disabled", true );
 		$(".liveAgentChatInput").prop( "disabled", true );
 		$("#validation").attr("display", "block"); 		
-		//$("#validation").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />')
+		$("#validation").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />')
 	} else {
 		//$("#validation").append('valid<br />')
 		    
