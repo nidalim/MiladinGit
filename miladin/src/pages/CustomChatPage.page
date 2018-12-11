@@ -227,7 +227,7 @@ div#validation {
     display:block;
     position: absolute;
     right: 0px;
-    bottom: 0px;
+    bottom: 79px;
     width: 100%;
     height: 79px;
     background: #019ff0;
