@@ -16,7 +16,7 @@ $(document).ready(function() {
 		interval = setTimeout(function(){
 			interval = undefined;
 			timesSubmitted = 0;
-			//$("#validation").append('TIMER RESET. Submit again.<br />')
+			$("#validation").append('TIMER RESET. Submit again.<br />')
 			$(".liveAgentSendButton").prop( "disabled", false );
 			$(".liveAgentChatInput").prop( "disabled", false );
 			$("#validation").attr("display", "none"); 	 	
