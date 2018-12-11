@@ -19,7 +19,7 @@ $(document).ready(function() {
 			$("#validation").empty();
 			$(".liveAgentSendButton").prop( "disabled", false );
 			$(".liveAgentChatInput").prop( "disabled", false );
-			
+			$(".liveAgentChatInput").attr("onkeyup", "return (event.keyCode=13);"); 
 			$("#validation").css("display", "none"); 	
 		}, intervalMilliseconds);
 	}
