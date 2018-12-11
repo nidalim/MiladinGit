@@ -27,7 +27,7 @@ $(document).ready(function() {
 	if (timesSubmitted > maxSubmits) {
 		$(".liveAgentSendButton").prop( "disabled", true );
 		$(".liveAgentChatInput").prop( "disabled", true );	
-		$('.liveAgentChatInput').keypress(function(event) {
+		$('input#liveAgentChatInput').keypress(function(event) {
     		if (event.keyCode == 13) {
        	 		event.preventDefault();
     		}
