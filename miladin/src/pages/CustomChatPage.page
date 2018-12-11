@@ -7,7 +7,7 @@ $(document).ready(function() {
   
 	var timesSubmitted = 0;
 	var maxSubmits = 5;
-	var intervalMilliseconds = 20000; // for testing   
+	var intervalMilliseconds = 15000; // for testing   
 	var interval;   
 	
 	$("button.liveAgentChatElement.liveAgentSendButton").click(function(event){
