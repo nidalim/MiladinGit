@@ -277,7 +277,7 @@ div#validation {
 	position:absolute;
 	bottom:74px;
 	z-index:90;
-	padding:20px;
+	padding:50px;
 }
 </style>
 <div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;background: #ffffff;">
