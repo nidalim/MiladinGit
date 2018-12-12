@@ -238,6 +238,12 @@ div#validation {
     text-align: center;
     overflow: hidden;
 }
+
+.liveAgentStateIdleAlert #liveAgentChatLogAlertMessage{
+	position:absolute;
+	bottom:50px;
+	z-index:90;
+}
 </style>
 <div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;background: #ffffff;">
 
