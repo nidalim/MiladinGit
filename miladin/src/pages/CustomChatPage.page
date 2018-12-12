@@ -11,8 +11,7 @@ $(document).ready(function() {
 	var interval; 
 		
 	//$("button.liveAgentChatElement.liveAgentSendButton, input#liveAgentChatInput").on("keypress click", function(event){
-	$("input#liveAgentChatInput").on("keypress", function(event){
-	$("button.liveAgentChatElement.liveAgentSendButton").on("click", function(event){
+	$("button.liveAgentChatElement.liveAgentSendButton").on("keypress", function(event){
 	
 	var keycode = (event.keyCode ? event.keyCode : event.which);
 	
@@ -40,7 +39,6 @@ $(document).ready(function() {
 	    
 	}
 	}	   
-	}); 
 	}); 	
 });
 </script>
