@@ -9,7 +9,25 @@ $(document).ready(function() {
 	var maxSubmits = 5;
 	var intervalMilliseconds = 15000; // for testing   
 	var interval;
-	var $liveAgentChatInput = $('.liveAgentChatInput');   
+	
+	var $liveAgentChatInput = $('.liveAgentChatInput');
+	$liveAgentChatInput.bind('keyup', function(e) {
+  		liveAgentChatInputKeyupHandler(e);
+	});
+			
+	function liveAgentChatInputKeyupHandler(e) {   
+	if (e.which === 13) {
+	console.log('Enter key!');
+	$liveAgentChatInput.unbind('keyup');
+			
+    return setTimeout(function(){
+    console.log('Rebind keyup event');
+    $liveAgentChatInput.keyup(passwordInputKeyupHandler);
+    }, 2000);
+  	} 
+
+  	console.log('Any other key...');
+	}   
 	
 	$("button.liveAgentChatElement.liveAgentSendButton").click(function(event){
 	
@@ -19,26 +37,7 @@ $(document).ready(function() {
 			timesSubmitted = 0;
 			$("#validation").empty();
 			$(".liveAgentSendButton").prop( "disabled", false );
-			$(".liveAgentChatInput").prop( "disabled", false );
-			
-			$liveAgentChatInput.bind('keyup', function(e) {
-  				liveAgentChatInputKeyupHandler(e);
-			});
-			
-			function liveAgentChatInputKeyupHandler(e) {   
-			  if (e.which === 13) {
-			    console.log('Enter key!');
-			    $liveAgentChatInput.unbind('keyup');
-			
-			    return setTimeout(function(){
-			      console.log('Rebind keyup event');
-			      $liveAgentChatInput.keyup(passwordInputKeyupHandler);
-			    }, 2000);
-			  } 
-			
-			  console.log('Any other key...');
-			}
-			
+			$(".liveAgentChatInput").prop( "disabled", false );		
 			$("#validation").css("display", "none"); 	
 		}, intervalMilliseconds);
 	}
@@ -46,8 +45,7 @@ $(document).ready(function() {
 	
 	if (timesSubmitted > maxSubmits) {
 		$(".liveAgentSendButton").prop( "disabled", true );
-		$(".liveAgentChatInput").prop( "disabled", true );	
-		
+		$(".liveAgentChatInput").prop( "disabled", true );			
 		$(".liveAgentChatInput").keyup(function(e) {
 			var charCode = e.charCode || e.keyCode;
     		if (charCode  == 13) {
