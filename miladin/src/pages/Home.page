@@ -361,7 +361,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   opacity: 1;
 }
 object#chat3 {
-    border-radius: 9px 10px 0px 0px;
+    border-radius: 0px;
 }
 
 #liveagent_invite_button_5735A000000khl3{
