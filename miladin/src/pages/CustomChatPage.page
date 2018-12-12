@@ -14,7 +14,7 @@ $(document).ready(function() {
 	
 	var keycode = (event.keyCode ? event.keyCode : event.which);
 	
-	if(keycode == '13' || event instanceof MouseEvent){
+	if(keycode == '13' || trigger( "click" )){
 		console.log('You pressed a "enter" key in textbox');	
 	
   	if (!interval){  	
