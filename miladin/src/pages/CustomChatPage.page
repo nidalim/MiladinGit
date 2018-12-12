@@ -20,7 +20,7 @@ $(document).ready(function() {
 			$(".liveAgentSendButton").prop( "disabled", false );
 			$(".liveAgentChatInput").prop( "disabled", false );
 			
-			$(".liveAgentChatInput").keypress(function(e) {
+			$(".liveAgentChatInput").keyup(function(e) {
 				var charCode = e.charCode || e.keyCode;
     			if (charCode  == 13) {
 					return true;
@@ -36,7 +36,7 @@ $(document).ready(function() {
 		$(".liveAgentSendButton").prop( "disabled", true );
 		$(".liveAgentChatInput").prop( "disabled", true );	
 		
-		$(".liveAgentChatInput").keypress(function(e) {
+		$(".liveAgentChatInput").keyup(function(e) {
 			var charCode = e.charCode || e.keyCode;
     		if (charCode  == 13) {
 				return false;
@@ -44,7 +44,6 @@ $(document).ready(function() {
 		});
 		
 		$("#validation").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />');
-		//$("#validation").css("padding", "20px");
 		$("#validation").css("display", "block");
 	} else {
 	    
