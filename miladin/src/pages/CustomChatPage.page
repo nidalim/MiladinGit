@@ -241,7 +241,7 @@ div#validation {
 
 .liveAgentStateIdleAlert #liveAgentChatLogAlertMessage{
 	position:absolute;
-	bottom:50px;
+	bottom:74px;
 	z-index:90;
 }
 </style>
