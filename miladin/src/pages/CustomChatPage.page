@@ -13,7 +13,8 @@ $(document).ready(function() {
 	$("button.liveAgentChatElement.liveAgentSendButton, input#liveAgentChatInput").on("keypress click", function(event){
 	
 	var keycode = (event.keyCode ? event.keyCode : event.which);
-	if(keycode == '13'){
+	
+	if(keycode == '13' && event.isTrigger){
 		console.log('You pressed a "enter" key in textbox');	
 	
   	if (!interval){  	
