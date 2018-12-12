@@ -10,7 +10,7 @@ $(document).ready(function() {
 	var intervalMilliseconds = 15000; // for testing   
 	var interval; 
 	
-	$("button.liveAgentChatElement.liveAgentSendButton").bind("keypress click", function(event){
+	$("button.liveAgentChatElement.liveAgentSendButton, input#liveAgentChatInput").on("keypress click", function(event){
 	
   	if (!interval){
 		interval = setTimeout(function(){
