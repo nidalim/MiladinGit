@@ -20,9 +20,11 @@ $(document).ready(function() {
 			$(".liveAgentSendButton").prop( "disabled", false );
 			$(".liveAgentChatInput").prop( "disabled", false );
 			
-			$(".liveAgentChatInput").on('keyup keypress', function(e) {
-				var keyCode = e.keyCode || e.which;
-    			return keyCode !== 13;
+			$(".liveAgentChatInput").keypress(function(e) {
+				var charCode = evt.charCode || evt.keyCode;
+    			if (charCode  == 13) {
+					return false;
+				}
 			});
 			
 			$("#validation").css("display", "none"); 	
