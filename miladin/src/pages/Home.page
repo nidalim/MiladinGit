@@ -394,7 +394,7 @@ top: -1000px;
 
 <!-- <textarea placeholder="Type message.." name="msg" required></textarea> -->
 
-<button class="btn-minimize"></button>
+
 <button type="button" class="btn3 cancel3" onclick="closeForm3();liveagent.rejectChat('5735A000000khl3')">x</button>
 
 <div id="object-parent3">
@@ -435,10 +435,7 @@ top: -1000px;
 </script>
 
 <script>
-$(".btn-minimize").click(function(){
-    $(this).toggleClass('btn-plus');
-    $(".chat-popup3").slideToggle();
-  });
+
 </script>
 
 <script>
