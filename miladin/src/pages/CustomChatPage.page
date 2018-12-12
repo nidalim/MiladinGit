@@ -230,7 +230,7 @@ div#validation {
     display: none;
     position: absolute;
     bottom: 0px;
-    background: #019ff0bd;
+    background: #019ff0;
     height: 70px;
     color: white;
     z-index: 10;
