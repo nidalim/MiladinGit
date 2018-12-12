@@ -16,7 +16,7 @@ $(document).ready(function() {
 	var keycode = (event.keyCode ? event.keyCode : event.which);
 	
 	if(keycode == '13'){
-		console.log('You pressed a "enter" key in textbox');	
+		console.log('***ENTER***');	
 	
   	if (!interval){  	
 		interval = setTimeout(function(){
@@ -43,17 +43,12 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
 	$("button.liveAgentChatElement.liveAgentSendButton").on("click", function(event){
 	
 	var keycode = (event.keyCode ? event.keyCode : event.which);
 	
 	if(event.type === 'click'){
-		console.log('You clicked');	
+		console.log('***CLICK***');	
 	
   	if (!interval){  	
 		interval = setTimeout(function(){
