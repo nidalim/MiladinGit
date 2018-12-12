@@ -11,12 +11,49 @@ $(document).ready(function() {
 	var interval; 
 		
 	//$("button.liveAgentChatElement.liveAgentSendButton, input#liveAgentChatInput").on("keypress click", function(event){
-	$("button.liveAgentChatElement.liveAgentSendButton").on("keypress", function(event){
+	$("input#liveAgentChatInput").on("keypress", function(event){
 	
 	var keycode = (event.keyCode ? event.keyCode : event.which);
 	
-	if(keycode == '13' || event.type === 'click'){
+	if(keycode == '13'){
 		console.log('You pressed a "enter" key in textbox');	
+	
+  	if (!interval){  	
+		interval = setTimeout(function(){
+			interval = undefined;
+			timesSubmitted = 0;
+			$("#validation").empty();
+			$(".liveAgentSendButton").prop( "disabled", false );
+			$(".liveAgentChatInput").prop( "disabled", false );		
+			$("#validation").css("display", "none"); 	
+		}, intervalMilliseconds);
+	}
+	timesSubmitted ++;
+	
+	if (timesSubmitted > maxSubmits) {
+		$(".liveAgentSendButton").prop( "disabled", true );
+		$(".liveAgentChatInput").prop( "disabled", true );			
+		$("#validation").append('Message sending failed. You can send 5 messages per 10 seconds. If you need to tell us more please email us at: support@intertrader.com or call us at: +44 203364 5187<br />');
+		$("#validation").css("display", "block");
+	} else {
+	    
+	}
+	}	   
+	}); 	
+});
+
+
+
+
+
+
+
+	$("button.liveAgentChatElement.liveAgentSendButton").on("click", function(event){
+	
+	var keycode = (event.keyCode ? event.keyCode : event.which);
+	
+	if(event.type === 'click'){
+		console.log('You clicked');	
 	
   	if (!interval){  	
 		interval = setTimeout(function(){
