@@ -21,7 +21,7 @@ $(document).ready(function() {
 			$(".liveAgentChatInput").prop( "disabled", false );
 			
 			$(".liveAgentChatInput").keypress(function(e) {
-				var charCode = evt.charCode || evt.keyCode;
+				var charCode = e.charCode || e.keyCode;
     			if (charCode  == 13) {
 					return false;
 				}
