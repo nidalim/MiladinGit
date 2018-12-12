@@ -20,6 +20,11 @@ $(document).ready(function() {
 			$(".liveAgentSendButton").prop( "disabled", false );
 			$(".liveAgentChatInput").prop( "disabled", false );
 			
+			$(".liveAgentChatInput").on('keyup keypress', function(e) {
+				var keyCode = e.keyCode || e.which;
+    			return keyCode !== 13;
+			});
+			
 			$("#validation").css("display", "none"); 	
 		}, intervalMilliseconds);
 	}
@@ -38,27 +43,6 @@ $(document).ready(function() {
 		 
 		   
 	}); 
-	
-	$(".liveAgentChatInput").on('keyup keypress', function(e) {
-  		if (!interval){
-		interval = setTimeout(function(){
-			interval = undefined;
-			timesSubmitted = 0;	
-		}, intervalMilliseconds);
-	}
-	timesSubmitted ++;
-	
-	if (timesSubmitted > maxSubmits) {
-		var keyCode = e.keyCode || e.which;
-  		if (keyCode === 13) { 
-   	 		e.preventDefault();
-    		return false;
-  		}	
-
-	} else {
-	    
-	}
-	});
 	
 });
 </script>
