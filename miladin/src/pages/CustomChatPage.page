@@ -8,28 +8,9 @@ $(document).ready(function() {
 	var timesSubmitted = 0;
 	var maxSubmits = 5;
 	var intervalMilliseconds = 15000; // for testing   
-	var interval;
+	var interval; 
 	
-	var $liveAgentChatInput = $('.liveAgentChatInput');
-	$liveAgentChatInput.bind('keyup', function(e) {
-  		liveAgentChatInputKeyupHandler(e);
-	});
-			
-	function liveAgentChatInputKeyupHandler(e) {   
-	if (e.which === 13) {
-	console.log('Enter key!');
-	$liveAgentChatInput.unbind('keyup');
-			
-    return setTimeout(function(){
-    console.log('Rebind keyup event');
-    $liveAgentChatInput.keyup(passwordInputKeyupHandler);
-    }, 2000);
-  	} 
-
-  	console.log('Any other key...');
-	}   
-	
-	$("button.liveAgentChatElement.liveAgentSendButton").click(function(event){
+	$("button.liveAgentChatElement.liveAgentSendButton").bind("keypress click", function(event){
 	
   	if (!interval){
 		interval = setTimeout(function(){
