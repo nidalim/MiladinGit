@@ -381,7 +381,7 @@ top: -1000px;
 .btn-minimize {
     width: 50px;
     height: 54px;
-    color: #ffffff00;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     opacity: 1;
