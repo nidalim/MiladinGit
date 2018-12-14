@@ -28,9 +28,9 @@ div#details {
 <apex:image id="intertrader-logo" value="https://www.intertrader.com/eu/wp-content/uploads/2017/11/intertrader-logo-white-optimize.png" alt="Intertrader"/>
 </div>   
 <p>  
-      <div class="postline">Last Visited Page: <apex:outputText value="{!$CurrentPage.parameters.lastVisitedPage}" /></div><br/><br/>    
-      <div class="postline">Disconnected By: <apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></div><br/><br/>
-      <div class="postline-transcript">Transcript:<br/><apex:outputText value="{!$CurrentPage.parameters.transcript}" /></div><br/><br/>  
+      <div class="postline">Last Visited Page: <apex:outputText value="{!$CurrentPage.parameters.lastVisitedPage}" /></div> 
+      <div class="postline">Disconnected By: <apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></div>
+      <div class="postline-transcript"><span style="font-size:17px; font-weight:bold;">Transcript:</span><br/><apex:outputText value="{!$CurrentPage.parameters.transcript}" /></div>
 </p>
 </div>
 <hr/>  
@@ -39,7 +39,7 @@ div#details {
 <!-- Message to show if chat is abandoned -->
 <div id='abandoned' style='display: none;'>
 
-    We are sorry you decided to leave the chat. Feel free to initiate a new session.
+    <p style="padding:12px">We are sorry you decided to leave the chat. Feel free to initiate a new session.</p>
     
 </div>
 
