@@ -1,6 +1,19 @@
 <apex:page showHeader="false">
+<style>
+#intertrader-logo{
+    background:#0E0E0E;
+}
+
+#intertrader-logo img{
+    border: 0;
+    height: 22px;
+    padding: 16px;
+}
+</style>
 <div id='details'>
-<h1>Post Chat Page</h1>   
+<div id="intertrader-logo">
+<apex:image id="intertrader-logo" value="https://www.intertrader.com/eu/wp-content/uploads/2017/11/intertrader-logo-white-optimize.png" alt="Intertrader"/>
+</div>   
 <p>  
       Last Visited Page: <apex:outputText value="{!$CurrentPage.parameters.lastVisitedPage}" /><br/>
       Original Referrer: <apex:outputText value="{!$CurrentPage.parameters.originalReferrer}" /><br/>     
@@ -13,7 +26,13 @@
 </p>
 </div>
 <hr/>
-      
+<liveAgent:clientChat >
+<liveAgent:clientChatSaveButton />
+<liveAgent:clientChatAlertMessage />
+<liveAgent:clientChatStatusMessage />
+<liveAgent:clientChatLog />
+<liveagent:clientChatInput /><liveAgent:clientChatSendButton />
+</liveAgent:clientChat>      
       
       
 <!-- Message to show if chat is abandoned -->
