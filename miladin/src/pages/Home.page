@@ -479,6 +479,7 @@ $(".btn-minimize").click(function() {
 			function openForm3() {
 			    document.getElementById("myForm3").style.display = "block";
 			    document.getElementsByClassName("cancel3")[0].style.display = "block";
+			    document.getElementsByClassName("btn-minimize")[0].style.display = "block";
 			
 			    // Adds an element to the document
 			    var p = document.getElementById("object-parent3");
@@ -494,6 +495,7 @@ $(".btn-minimize").click(function() {
 			function closeForm3() {
 			    document.getElementById("myForm3").style.display = "none";
 			    document.getElementsByClassName("cancel3")[0].style.display = "none";
+			    document.getElementsByClassName("btn-minimize")[0].style.display = "none";
 			
 			    // Removes an element from the document
 			    var element = document.getElementById("chat3");
