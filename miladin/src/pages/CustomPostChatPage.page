@@ -30,12 +30,13 @@ div#details {
 <div id="intertrader-logo">
 <apex:image id="intertrader-logo" value="https://www.intertrader.com/eu/wp-content/uploads/2017/11/intertrader-logo-white-optimize.png" alt="Intertrader"/>
 </div>   
-<p>  
+  
 
-      <div class="postline">Disconnected By:</br><apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></div>
+      <div class="postline">Disconnected By:</div>
+      <div><apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></div>
       <div class="postline-transcript"><span style="font-size:17px; font-weight:bold;">Transcript:</span><br/><apex:outputText value="{!$CurrentPage.parameters.transcript}" /></div>
       
-</p>
+
 </div>
  
       
