@@ -382,6 +382,9 @@ top: -1000px;
 .btn-minimize.btn-plus {
     background-color: #0F0;
 }
+.changeHeight{
+	height: 30px;
+}
 </style>
 
 
@@ -415,14 +418,9 @@ top: -1000px;
 </div>	
 <script>
 $(document).ready(function(){
-var height = $('#menu').prop('height');
+
 $(".btn-minimize").click(function() {
-    if($('#object-parent3').height() != height){
-        $("#object-parent3").css('height', height);
-    }
-    else{
-        $("#object-parent3").css('height', '40px');
-    }
+    $("#object-parent3").toggleClass("changeHeight");
 });
 
 });
