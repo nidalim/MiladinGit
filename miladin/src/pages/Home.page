@@ -403,7 +403,7 @@ top: -1000px;
 	background-position: center;
 }
 .btn-minimize.btn-plus {
-    background-image: url(https://img.icons8.com/small/50/FFFFFF/maximize-window.png);
+    background-image: url(https://img.icons8.com/small/50/FFFFFF/maximize-window.png) !important;
 }
 .changeHeight{
 	height: 30px;
