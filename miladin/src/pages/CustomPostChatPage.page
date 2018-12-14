@@ -17,7 +17,6 @@
 }
 .postline-transcript{
 	background: #43bfff;
-    width: 100%;
     padding: 12px;
 }
 div#details {
@@ -29,9 +28,9 @@ div#details {
 <apex:image id="intertrader-logo" value="https://www.intertrader.com/eu/wp-content/uploads/2017/11/intertrader-logo-white-optimize.png" alt="Intertrader"/>
 </div>   
 <p>  
-      <span class="postline">Last Visited Page: <apex:outputText value="{!$CurrentPage.parameters.lastVisitedPage}" /></span><br/><br/>    
-      <span class="postline">Disconnected By: <apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></span><br/><br/>
-      <span class="postline-transcript">Transcript:<br/><apex:outputText value="{!$CurrentPage.parameters.transcript}" /></span><br/><br/>  
+      <div class="postline">Last Visited Page: <apex:outputText value="{!$CurrentPage.parameters.lastVisitedPage}" /></div><br/><br/>    
+      <div class="postline">Disconnected By: <apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></div><br/><br/>
+      <div class="postline-transcript">Transcript:<br/><apex:outputText value="{!$CurrentPage.parameters.transcript}" /></div><br/><br/>  
 </p>
 </div>
 <hr/>  
