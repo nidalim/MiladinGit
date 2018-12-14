@@ -416,15 +416,8 @@ top: -1000px;
 <script>
 $(document).ready(function(){
 
-
-$('.btn-minimize').click(function() {
-    $('#object-parent3').hide();
-});
-
-$('.btn-minimize').click(function() {
-    $('#object-parent3').show();
-});
-
+$('.btn-minimize').on('click', function() { $("#object-parent3").show(); });
+$('.btn-minimize').on('click', function() { $("#object-parent3").hide(); });
 
 });
 </script>
