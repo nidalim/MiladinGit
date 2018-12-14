@@ -33,7 +33,7 @@ div#details {
   
 
       <div class="postline">Disconnected By:</div>
-      <div style="color:white; text-align:center;"><apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></div>
+      <div style="color:white; text-align:center;padding-bottom: 15px;"><apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></div>
       <div class="postline-transcript"><span style="font-size:17px; font-weight:bold;">Transcript:</span><br/><apex:outputText value="{!$CurrentPage.parameters.transcript}" /></div>
       
 
