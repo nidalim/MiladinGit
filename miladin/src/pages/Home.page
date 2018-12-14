@@ -415,7 +415,7 @@ top: -1000px;
 </div>	
 <script>
 $(document).ready(function(){
-
+var height = $('#menu').prop('height');
 $(".btn-minimize").click(function() {
     if($('#object-parent3').height() != height){
         $("#object-parent3").css('height', height);
