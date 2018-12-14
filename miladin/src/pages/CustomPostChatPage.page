@@ -10,9 +10,18 @@
     padding: 16px;
 }
 .postline{
-	background: #e2e2e2;
+	background: #0e0e0e;
     width: 100%;
     padding: 12px;
+    color: white;
+}
+.postline-transcript{
+	background: #43bfff;
+    width: 100%;
+    padding: 12px;
+}
+div#details {
+    background: #0e0e0e;
 }
 </style>
 <div id='details'>
@@ -20,14 +29,9 @@
 <apex:image id="intertrader-logo" value="https://www.intertrader.com/eu/wp-content/uploads/2017/11/intertrader-logo-white-optimize.png" alt="Intertrader"/>
 </div>   
 <p>  
-      <span class="postline">Last Visited Page: <apex:outputText value="{!$CurrentPage.parameters.lastVisitedPage}" /></span><br/><br/>
-      <span class="postline">Original Referrer: <apex:outputText value="{!$CurrentPage.parameters.originalReferrer}" /></span><br/><br/>     
-      <span class="postline">City: <apex:outputText value="{!$CurrentPage.parameters.city}" /></span><br/><br/>
-      <span class="postline">Region: <apex:outputText value="{!$CurrentPage.parameters.region}" /></span><br/><br/>
-      <span class="postline">Country: <apex:outputText value="{!$CurrentPage.parameters.country}" /></span><br/><br/>      
+      <span class="postline">Last Visited Page: <apex:outputText value="{!$CurrentPage.parameters.lastVisitedPage}" /></span><br/><br/>    
       <span class="postline">Disconnected By: <apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></span><br/><br/>
-      <span class="postline">Transcript: <apex:outputText value="{!$CurrentPage.parameters.transcript}" /></span><br/><br/>     
-      <span class="postline">Attached Records: <apex:outputText value="{!$CurrentPage.parameters.attachedRecords}" /></span><br/><br/>
+      <span class="postline-transcript">Transcript:<br/><apex:outputText value="{!$CurrentPage.parameters.transcript}" /></span><br/><br/>  
 </p>
 </div>
 <hr/>  
