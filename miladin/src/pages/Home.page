@@ -417,12 +417,15 @@ top: -1000px;
 $(document).ready(function(){
 
 
-$(".btn-minimize").click(function(){
-    $(this).toggleClass('btn-plus');
-    $("#object-parent3").slideToggle();
-  });
-  
-  
+$('.btn-minimize').click(function() {
+    $('#object-parent3').hide();
+});
+
+$('.btn-minimize').click(function() {
+    $('#object-parent3').show();
+});
+
+
 });
 </script>
 <script>
