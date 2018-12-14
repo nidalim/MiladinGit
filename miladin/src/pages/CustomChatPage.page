@@ -2,6 +2,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
+
+
+$('.liveAgentChatInput').on('keypress', function(e) {
+    console.log( e.which );
+    if($('.liveAgentChatInput').val().length == 0){
+        var k = e.which;
+        var ok = k >= 65 && k <= 90 || // A-Z
+            k >= 97 && k <= 122 || // a-z
+            k >= 48 && k <= 57; // 0-9
+        
+        if (!ok){
+            e.preventDefault();
+        }
+    }
+}); 
+
+
   $(".liveAgentChatInput").attr("placeholder", "Enter your question here");  
   $(".liveAgentChatInput").attr("maxlength", "255"); 
   
