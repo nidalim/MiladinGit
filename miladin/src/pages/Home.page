@@ -403,6 +403,10 @@ top: -1000px;
 .btn-minimize:focus{
 	outline:0;
 }
+.cancel3:focus{
+	outline:0;
+}
+
 .btn-minimize:hover{
 	background-position: center;
 }
