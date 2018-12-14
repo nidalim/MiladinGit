@@ -416,8 +416,13 @@ top: -1000px;
 <script>
 $(document).ready(function(){
 
-$(".btn-minimize" ).click(function() {
-  $("#object-parent3" ).slideToggle( "slow" );
+$(".btn-minimize").click(function() {
+    if($('#object-parent3').height() != height){
+        $("#object-parent3").css('height', height);
+    }
+    else{
+        $("#object-parent3").css('height', '40px');
+    }
 });
 
 });
