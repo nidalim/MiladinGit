@@ -402,7 +402,7 @@ top: -1000px;
 .btn-minimize:hover{
 	background-position: center;
 }
-.btn-plus {
+.btn-minimize.btn-plus {
     background-image: url(https://img.icons8.com/small/50/FFFFFF/maximize-window.png) !important;
 }
 .changeHeight{
