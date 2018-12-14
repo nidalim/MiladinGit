@@ -400,6 +400,10 @@ top: -1000px;
     background-position: center;
     display:none;
 }
+
+.btn-minimize:hover{
+    background-color: #53a7f0;
+}
 .btn-minimize:focus{
 	outline:0;
 }
