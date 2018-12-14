@@ -416,9 +416,7 @@ top: -1000px;
 <script>
 $(document).ready(function(){
 
-$(".btn-minimize" ).click(function() {     
-   $('#object-parent3').toggle("slide", { direction: "bottom" }, 500);
-});
+
 
 });
 </script>
