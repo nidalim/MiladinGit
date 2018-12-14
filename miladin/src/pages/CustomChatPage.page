@@ -3,31 +3,32 @@
 <script>
 $(document).ready(function() {
 
+//restrict only space characters
+	$('.liveAgentChatInput').on('keypress', function(e) {
+	console.log( e.which );
+	    if($('.liveAgentChatInput').val().length == 0){
+	        var k = e.which;
+	        var ok = k >= 65 && k <= 90 || // A-Z
+	            k >= 97 && k <= 122 || // a-z
+	            k >= 48 && k <= 57; // 0-9
+	        
+	        if (!ok){
+	            e.preventDefault();
+	        }
+	    }
+	}); 
 
-$('.liveAgentChatInput').on('keypress', function(e) {
-    console.log( e.which );
-    if($('.liveAgentChatInput').val().length == 0){
-        var k = e.which;
-        var ok = k >= 65 && k <= 90 || // A-Z
-            k >= 97 && k <= 122 || // a-z
-            k >= 48 && k <= 57; // 0-9
-        
-        if (!ok){
-            e.preventDefault();
-        }
-    }
-}); 
-
-
+//placeholder and max length settings
   $(".liveAgentChatInput").attr("placeholder", "Enter your question here");  
   $(".liveAgentChatInput").attr("maxlength", "255"); 
   
+//no more than 5 submits per 10 seconds  
 	var timesSubmitted = 0;
 	var maxSubmits = 5;
 	var intervalMilliseconds = 15000; // for testing   
 	var interval; 
-		
-	//$("button.liveAgentChatElement.liveAgentSendButton, input#liveAgentChatInput").on("keypress click", function(event){
+
+//no more than 5 submits per 10 seconds - input	
 	$("input#liveAgentChatInput").on("keypress", function(event){
 	
 	var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -59,7 +60,7 @@ $('.liveAgentChatInput').on('keypress', function(e) {
 	}); 	
 
 
-
+//no more than 5 submits per 10 seconds - submit	
 	$("button.liveAgentChatElement.liveAgentSendButton").on("click", function(event){
 	
 	var keycode = (event.keyCode ? event.keyCode : event.which);
