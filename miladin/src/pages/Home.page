@@ -398,6 +398,7 @@ top: -1000px;
     background-size: 26px;
     background-repeat: no-repeat;
     background-position: center;
+    display:none;
 }
 .btn-minimize:hover{
 	background-position: center;
