@@ -9,13 +9,16 @@
     height: 22px;
     padding: 16px;
 }
+.postline{
+	
+}
 </style>
 <div id='details'>
 <div id="intertrader-logo">
 <apex:image id="intertrader-logo" value="https://www.intertrader.com/eu/wp-content/uploads/2017/11/intertrader-logo-white-optimize.png" alt="Intertrader"/>
 </div>   
 <p>  
-      Last Visited Page: <apex:outputText value="{!$CurrentPage.parameters.lastVisitedPage}" /><br/>
+      <span class="postline">Last Visited Page:</span> <apex:outputText value="{!$CurrentPage.parameters.lastVisitedPage}" /><br/>
       Original Referrer: <apex:outputText value="{!$CurrentPage.parameters.originalReferrer}" /><br/>     
       City: <apex:outputText value="{!$CurrentPage.parameters.city}" /><br/>
       Region: <apex:outputText value="{!$CurrentPage.parameters.region}" /><br/>
@@ -25,14 +28,7 @@
       Attached Records : <apex:outputText value="{!$CurrentPage.parameters.attachedRecords}" /><br />
 </p>
 </div>
-<hr/>
-<liveAgent:clientChat >
-<liveAgent:clientChatSaveButton />
-<liveAgent:clientChatAlertMessage />
-<liveAgent:clientChatStatusMessage />
-<liveAgent:clientChatLog />
-<liveagent:clientChatInput /><liveAgent:clientChatSendButton />
-</liveAgent:clientChat>      
+<hr/>  
       
       
 <!-- Message to show if chat is abandoned -->
