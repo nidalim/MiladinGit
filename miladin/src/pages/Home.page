@@ -402,7 +402,7 @@ top: -1000px;
 .btn-minimize:hover{
 	background-position: center;
 }
-.btn-minimize.btn-plus {
+.btn-plus {
     background-image: url(https://img.icons8.com/small/50/FFFFFF/maximize-window.png) !important;
 }
 .changeHeight{
@@ -463,7 +463,7 @@ $(document).ready(function(){
 
 $(".btn-minimize").click(function() {
     $("#object-parent3").toggleClass("changeHeight");
-    $(".btn-minimize").toggleClass(".btn-plus");
+    $(".btn-minimize").toggleClass("btn-plus");
 });
 
 });
