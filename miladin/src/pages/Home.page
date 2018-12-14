@@ -400,6 +400,9 @@ top: -1000px;
     background-position: center;
     display:none;
 }
+.btn-minimize:focus{
+	outline:0;
+}
 .btn-minimize:hover{
 	background-position: center;
 }
