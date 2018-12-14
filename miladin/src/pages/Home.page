@@ -379,6 +379,9 @@ top: -1000px;
     height: 50px;
     background-color: #F00;
 }
+.btn-minimize.btn-plus {
+    background-color: #0F0;
+}
 </style>
 
 
@@ -413,12 +416,13 @@ top: -1000px;
 <script>
 $(document).ready(function(){
 
-    $('.btn-minimize').toggle(function () {
-    	$("#object-parent3").css({height: "34px"});
-	}, function () {
-    	$("#object-parent3").css({height: "auto"});
-	});
 
+$(".btn-minimize").click(function(){
+    $(this).toggleClass('btn-plus');
+    $("#object-parent3").slideToggle();
+  });
+  
+  
 });
 </script>
 <script>
