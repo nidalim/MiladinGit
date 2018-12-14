@@ -20,7 +20,7 @@ body{
 }
 .postline-transcript{
 	background: #43bfff;
-    padding: 12px;
+    padding: 20px;
 }
 div#details {
     background: #0e0e0e;
@@ -35,7 +35,7 @@ div#details {
 
       <div class="postline">Disconnected By:</div>
       <div style="color:white; text-align:center;padding-bottom: 15px;"><apex:outputText value="{!$CurrentPage.parameters.disconnectedBy}" /></div>
-      <div class="postline-transcript"><span style="font-size:17px; font-weight:bold;">Transcript:</span><br/><apex:outputText value="{!$CurrentPage.parameters.transcript}" /></div>
+      <div class="postline-transcript"><span style="font-size:17px; font-weight:bold;display:block;text-align:center;">Transcript:</span><br/><apex:outputText value="{!$CurrentPage.parameters.transcript}" /></div>
       
 
 </div>
