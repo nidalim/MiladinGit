@@ -412,9 +412,13 @@ top: -1000px;
 </div>	
 <script>
 $(document).ready(function(){
-  $(".btn-minimize").click(function(){
-    $("#object-parent3").css("height", "34px");
-  });
+
+    $('.btn-minimize').toggle(function () {
+    	$("#object-parent3").css({height: "34px"});
+	}, function () {
+    	$("#object-parent3").css({height: "auto"});
+	});
+
 });
 </script>
 <script>
