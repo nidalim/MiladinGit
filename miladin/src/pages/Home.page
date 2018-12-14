@@ -463,7 +463,7 @@ $(document).ready(function(){
 
 $(".btn-minimize").click(function() {
     $("#object-parent3").toggleClass("changeHeight");
-    $(".btn-minimize").toggleClass(".btn-minimize.btn-plus");
+    $(".btn-minimize").toggleClass(".btn-plus");
 });
 
 });
