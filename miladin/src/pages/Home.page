@@ -429,15 +429,7 @@ top: -1000px;
 
 
 <!-- For this usage, the "Animation" type of this invitation should be set to "Custom", otherwise two invitations will appear (the Salesforce-provided one and this custom one). -->
-<div id="liveagent_invite_button_5735A000000khl3" style="position: fixed; left: -1000px; top: -1000px; z-index: 10000;">
-	
-<!-- Creates an "X" option to reject or close the invitation if it's offered  -->
-<div style="cursor: pointer; padding: 5px; right: 5px; position: absolute; color: white; font-size: 1.8em; font-weight: bold;" onclick="liveagent.rejectChat('5735A000000khl3')"></div>
-
-<!-- Provides the Start Chat option for the customer to accept or start the chat for the invitation  -->
-<div style="cursor: pointer; top: 42px; left: 65px; position: absolute;font-weight: bold; color:white; font-size: 16px;" onclick="liveagent.startChat('5735A000000khl3')"></div>
-
-</div>
+<div id="liveagent_invite_button_5735A000000khl3" style="position: fixed; left: -1000px; top: -1000px; z-index: 10000;"></div>
 	
 <div class="chat-popup3" id="myForm3">
 
