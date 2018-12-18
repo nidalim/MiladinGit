@@ -429,7 +429,7 @@ top: -1000px;
 
 
 <!-- For this usage, the "Animation" type of this invitation should be set to "Custom", otherwise two invitations will appear (the Salesforce-provided one and this custom one). -->
-<div id="liveagent_invite_button_5735A000000khl3" style="position: fixed; left: -1000px; top: -1000px; z-index: 10000;"></div>
+<div id="liveagent_invite_button_5735A000000khl3" style="position: fixed; width:0; left: -1000px; top: -1000px; z-index: 10000;"></div>
 	
 <div class="chat-popup3" id="myForm3">
 
