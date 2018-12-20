@@ -312,10 +312,18 @@ div#validation {
 
 span.client + span {
     text-align: right;
+    float: right;
+    clear: both;
+    margin: 10px;
+    color: #888888;
 }
 
 span.operator + span {
     text-align: left;
+    float: left;
+    clear: both;
+    margin: 10px;
+    color: #888888;
 }
 </style>
 <div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;background: #ffffff;">
