@@ -304,6 +304,7 @@ span.client + span {
     clear: both;
     margin: 10px;
     color: #888888;
+    font-size: 13px;
 }
 
 span.operator + span {
@@ -312,6 +313,7 @@ span.operator + span {
     clear: both;
     margin: 10px;
     color: #888888;
+    font-size: 13px;
 }
 </style>
 <div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;background: #ffffff;">
