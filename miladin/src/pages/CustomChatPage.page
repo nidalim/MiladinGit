@@ -317,7 +317,7 @@ span.operator + span {
 }
 
 span.system {
-    position: relative;
+    position: absolute;
     bottom: 0px;
     background: #019fff;
     color: white;
@@ -325,6 +325,7 @@ span.system {
     height: 80px;
     text-align: center;
     line-height: 80px;
+    display: block!important;
 }
 </style>
 <div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;background: #ffffff;">
