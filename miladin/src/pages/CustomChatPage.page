@@ -176,7 +176,7 @@ button#liveAgentSaveButton {
     position: absolute;
     top: 0;
     border-radius: 0;
-    right: 148px;
+    right: 98px;
     z-index: 1;
 }
 button#liveAgentSaveButton:hover{
@@ -203,7 +203,7 @@ button.liveAgentChatElement.liveAgentEndButton {
     top: 0;
     border-radius: 0;
     float: right;
-    right: 98px;
+    right: 148px;
     z-index: 1;
 }
 span.operator {
