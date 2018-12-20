@@ -328,7 +328,7 @@ span.system {
     width: 100%;
 }
 </style>
-<div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;background: #ffffff;">
+<div style="top: 0; left: 0; right: 0; bottom: 0; position: absolute;background: #0e0e0e;">
 
 <liveAgent:clientChat >
 <div id="intertrader-logo">
