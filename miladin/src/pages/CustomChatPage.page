@@ -298,18 +298,6 @@ div#validation {
 	padding:50px;
 }
 
-#liveAgentChatLogText .timestamp {
-  
-}
-
-#liveAgentChatLogText .operator.timestamp {
-   
-}
-
-#liveAgentChatLogText .client.timestamp {
-  
-}
-
 span.client + span {
     text-align: right;
     float: right;
