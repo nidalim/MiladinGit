@@ -270,7 +270,7 @@ div#utm a{
 
 <div id="utm">
 
-<a id="1" href="https://miladin-developer-edition.na49.force.com/chat">1</a>
+<a id="1" href="https://miladin-developer-edition.na49.force.com/chat?utm_source=salesforce&utm_medium=1&utm_campaign=test&utm_term=campaignterm1&utm_content=campaigncontent1">1</a>
 
 <a id="2" href="https://miladin-developer-edition.na49.force.com/chat">2</a>
 
