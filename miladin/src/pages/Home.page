@@ -1,6 +1,21 @@
-<apex:page showHeader="false" title="{!'Home'}" cache="false">
+<apex:page sidebar="false" showHeader="false" title="{!'Home'}" cache="false" applyHtmlTag="false" applyBodyTag="false">
 
-        
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async='async' src="https://www.googletagmanager.com/gtag/js?id=UA-131457498-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131457498-1');
+</script>
+
+</head>
+
+<body>        
         
 <!--
 
@@ -1038,5 +1053,9 @@ function closeForm2() {
 <!-- <div id="liveagent_invite_button_5735A000000khl3" style="display:none;"><span style="cursor: pointer; width: 100px; height: 20px; padding: 5px;" onclick="liveagent.startChat('5735A000000khl3')">Start Chat</span>
 <span style="cursor: pointer; width: 100px; height: 20px; padding: 5px;" onclick="liveagent.rejectChat('5735A000000khl3')">Reject Chat</span>
 </div> -->
+
+</body>
+
+</html>
 
 </apex:page>
