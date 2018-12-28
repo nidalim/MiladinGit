@@ -242,13 +242,30 @@ liveagent.showWhenOffline('5735A000000khky', document.getElementById('liveagent_
 
 div#utm a{
 	font-size: 2em;
-	background: #f52f2f;
 	color: white;
 	padding: 20px;
 	text-decoration: none;
+}
+
+#\31 {
+	background: #f52f2f;
 	border: 10px solid #e32d2d;
 }
 
+#\32 {
+	background: #2fc4f5;
+	border: 10px solid #2cb7e4;
+}
+
+#\33 {
+	background: #f5d72f;
+	border: 10px solid #e9c607;
+}
+
+#\34 {
+	background: #5ee172;
+	border: 10px solid #4fd263;
+}
 </style>
 
 <div id="utm">
