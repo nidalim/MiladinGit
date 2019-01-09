@@ -231,7 +231,7 @@ liveagent.showWhenOffline('5735A000000khky', document.getElementById('liveagent_
 
 <!-- ****************************************************** UTMs ********************************************************* -->
 
-<style>
+<!-- <style>
 
 #utm {
 
@@ -278,7 +278,7 @@ div#utm a{
 
 <a id="4" href="https://miladin-developer-edition.na49.force.com/chat?utm_source=salesforce&utm_medium=4&utm_campaign=test&utm_term=campaignterm4&utm_content=campaigncontent4">4</a>
 
-</div>
+</div> -->
 	
 	
 	
